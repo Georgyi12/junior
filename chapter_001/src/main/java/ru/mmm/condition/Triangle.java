@@ -24,10 +24,10 @@ public class Triangle {
      */
     public double period(double ab, double ac, double bc) {
 
-        double result;
+        double p;
 
-        result = (ab + ac + bc)/2;
-        return result;
+        p = (ab + ac + bc)/2;
+        return p;
     }
 
 
@@ -50,7 +50,7 @@ public class Triangle {
             // написать формулу для расчета площади треугольника.
             //rsl = ...
 
-            rsl = 
+            rsl = Math.sqrt(p * (p-ab) * (p-bc) * (p-ac));
         }
 
         return rsl;
