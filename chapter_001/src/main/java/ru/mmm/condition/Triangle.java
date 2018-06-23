@@ -29,6 +29,8 @@ public class Triangle {
         result = (ab + ac + bc)/2;
         return result;
     }
+
+
     /**
      * Метод должен вычислить площадь треугольника.
      *
@@ -42,11 +44,15 @@ public class Triangle {
         double bc = this.b.distanceTo(this.c);
 
         double p = this.period(ab, ac, bc);
+
+
         if (this.exist(ab, ac, bc)) {
             // написать формулу для расчета площади треугольника.
             //rsl = ...
-            rsl = (ab + ac + bc)/2;
+
+            rsl = 
         }
+
         return rsl;
     }
 
