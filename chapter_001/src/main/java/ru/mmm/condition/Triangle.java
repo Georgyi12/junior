@@ -1,4 +1,5 @@
 package ru.mmm.condition;
+
 public class Triangle {
     private Point a;
     private Point b;
@@ -46,17 +47,17 @@ public class Triangle {
         double p = this.period(ab, ac, bc);
 
 
+        // написать формулу для расчета площади треугольника.
+        //rsl = ...
         if (this.exist(ab, ac, bc)) {
-            // написать формулу для расчета площади треугольника.
-            //rsl = ...
 
-            rsl = Math.sqrt(p * (p-ab) * (p-bc) * (p-ac));
+            rsl = Math.sqrt(p*(p - a)*(p - b)*(p - c));
         }
-
         return rsl;
     }
 
-    /**
+
+        /**
      * Метод проверяет можно ли построить треугольник с такими длинами сторон.
      *
      * Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
@@ -67,7 +68,12 @@ public class Triangle {
      * @return
      */
     private boolean exist(double ab, double ac, double bc) {
-        return false;
+
+
+        return a + b > a || a + c > a || b + c > b;
+
     }
-}
+    }
+
+
 
