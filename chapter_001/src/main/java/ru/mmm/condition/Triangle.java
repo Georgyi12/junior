@@ -49,13 +49,13 @@ public class Triangle {
 
         // написать формулу для расчета площади треугольника.
         //rsl = ...
-        if (this.exist(ab, ac, bc)) {
+
 
 
             rsl = Math.sqrt(p * (p - ab) * (p - bc) * (p - ac));
 
 
-        }
+
 
 
         /**
@@ -72,15 +72,14 @@ public class Triangle {
              return rsl;
     }
 
-
     private boolean exist(double ab, double ac, double bc) {
 
-        return a + b > a || a + c > b || b + c > a;
-
+        if (this.exist(ab, ac, bc)) {
+        }
+            return true;
 
     }
 
+
+
 }
-
-
-
