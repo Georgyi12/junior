@@ -51,29 +51,36 @@ public class Triangle {
         //rsl = ...
         if (this.exist(ab, ac, bc)) {
 
-            rsl = Math.sqrt(p*(p - a)*(p - b)*(p - c));
+
+            rsl = Math.sqrt(p * (p - ab) * (p - bc) * (p - ac));
+
+
         }
-        return rsl;
-    }
 
 
         /**
-     * Метод проверяет можно ли построить треугольник с такими длинами сторон.
-     *
-     * Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
-     *
-     * @param ab Длина от точки a b.
-     * @param ac Длина от точки a c.
-     * @param bc Длина от точки b c.
-     * @return
-     */
+         * Метод проверяет можно ли построить треугольник с такими длинами сторон.
+         *
+         * Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
+         *
+         * @param ab Длина от точки a b.
+         * @param ac Длина от точки a c.
+         * @param bc Длина от точки b c.
+         * @return
+         */
+
+             return rsl;
+    }
+
+
     private boolean exist(double ab, double ac, double bc) {
 
+        return a + b > a || a + c > b || b + c > a;
 
-        return a + b > a || a + c > a || b + c > b;
 
     }
-    }
+
+}
 
 
 
