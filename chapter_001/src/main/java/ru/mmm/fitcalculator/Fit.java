@@ -10,7 +10,8 @@ public class Fit {
      * @param height Рост.
      * @return идеальный вес.
      */
-    public double manWeight(double height) {
+    public double manWeight(double height)
+    {
         return height - 100 * 1.15;
     }
 
