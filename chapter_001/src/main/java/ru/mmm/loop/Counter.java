@@ -8,7 +8,7 @@ public class Counter {
         int i = 0;
         for (i = start; i <= finish; i++) {
             if (i % 2 == 0) {
-
+            result = result + i;
             }
         }
       return result;
