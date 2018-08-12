@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 
 public class TurnTest {
     @Test
-    public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
+    public void whenTurnArrayWithAmountOfElementsThenTurnedArray() {
         Turn turner = new Turn();
         int[] input = new int[]{4, 1, 6, 2};
         int[] result = turner.turn(input);
@@ -15,26 +15,23 @@ public class TurnTest {
     }
 
     @Test
-    public void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {
-        //напишите здесь тест, проверяющий переворот массива с нечётным числом элементов, например {1, 2, 3, 4, 5}.
-        Turn turner = new Turn();
-        int[] input = new int[]{1, 2, 3, 4, 5};
-        int[] result = turner.turn(input);
-        int[] expect = new int[]{5, 3, 1};
-        assertThat(result, is(expect));
-        //assertThat(result.Array, is(expect.Array));
-
+    public void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
+        //напишите здесь тест, проверяющий переворот массива с чётным числом элементов, например {2, 6, 1, 4}.
+        Turn turn = new Turn();
+        int[] array = {2, 6, 1, 4};
+        int resultArray = turn.back(array);
+        int[]  expectArray = {4, 6, 2};
+        assertThat(resultArray, is(expectArray));
     }
 
     @Test
-    public void whenTurnArrayWithunevenAmountOfElementsThenTurnedArray() {
+    public void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {
         //напишите здесь тест, проверяющий переворот массива с нечётным числом элементов, например {1, 2, 3, 4, 5}.
-        Turn turner = new Turn();
-        int[] input = new int[]{1, 2, 3, 4, 5};
-        int[] result = turner.turn(input);
-        int[] expect = new int[]{4, 2};
-        assertThat(result, is(expect));
-        //assertThat(result.Array, is(expect.Array));
-
+        Turn turn = new Turn();
+        int[] array = {1, 2, 3, 4, 5};
+        int resultArray = turn.back(array);
+        int[]  expectArray = {5, 3, 1};
+        assertThat(resultArray, is(expectArray));
     }
 }
+
