@@ -12,19 +12,21 @@ public class Turn {
         return array;
     }
 
-    public int back(int[] array) {
-        int rst = 0;
+
+    public int odd(int[] array) {
         for (int index = 0; index < array.length / 2; index++) {
             int temp = array[index];
             array[index] = array[array.length - 1 - index];
             array[array.length - 1 - index] = temp;
 
-            if ((array[index] % 2) == 0) {
-
-                rst = rst + array[index];
+            int rst = 0;
+            if (array.length % 2 != 0) {
+                //int rst;
+                //return array.length;
+                rst = rst + array.length;
             }
-
         }
-        return rst;
+        return array.length;
+
     }
 }
