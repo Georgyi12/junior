@@ -15,17 +15,14 @@ public class TurnTest {
     }
 
     @Test
-    public void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {
-        //напишите здесь тест, проверяющий переворот массива с чётным числом элементов, например {1, 2, 3, 4, 5}.
+    public void whenTurnArray() {
         Turn turner = new Turn();
-        int[] input = new int[5];
-        int result = turner.odd(input);
-        int[] expect = new int[5];
-        //{1, 2, 3, 4, 5};
+        int[] input = new int[]{3, 9, 5, 4, 8};
+        int[] result = turner.turn(input);
+        int[] expect = new int[]{8, 4, 5, 9, 3};
         assertThat(result, is(expect));
-        //assertThat(resultArray, is(expectArray));
-
     }
-
-
 }
+
+
+
