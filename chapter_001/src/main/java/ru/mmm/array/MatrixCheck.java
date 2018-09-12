@@ -7,13 +7,16 @@ public class MatrixCheck {
             if (data[0][0] != data[i][i]) {
                 result = false;
                 break;
-            }
 
+            }
+            if (data[0][data.length - 1] != data[i][data.length - 1 - i]) {
+                result = false;
+                break;
+            }
         }
         return result;
     }
 }
-
 
 
 

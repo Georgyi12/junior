@@ -9,8 +9,8 @@ public class MatrixCheckTest {
     public void whenDataMonoByTrueThenTrue() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][] {
-                {true, true, true},
-                {false, true, true},
+                {true, false, true},
+                {false, true, false},
                 {true, false, true}
         };
         boolean result = check.mono(input);
@@ -22,10 +22,23 @@ public class MatrixCheckTest {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][] {
                 {true, true, false},
-                {false, false, true},
-                {true, false, true}
+                {false, true, true},
+                {false, false, false}
         };
         boolean result = check.mono(input);
         assertThat(result, is(false));
+    }
+
+
+    @Test
+    public void whenDataMonoаFromBelowByTrueThenTrue() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][] {
+                {true, false, true},
+                {false, true, false},
+                {true, false, false}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(true));
     }
 }
