@@ -11,7 +11,7 @@ public class MatrixCheckTest {
         boolean[][] input = new boolean[][] {
                 {true, false, true},
                 {false, true, false},
-                {true, false, true}
+                {false, false, true}
         };
         boolean result = check.mono(input);
         assertThat(result, is(true));
@@ -35,7 +35,7 @@ public class MatrixCheckTest {
     public void whenDataMonoаFromBelowByTrueThenTrue() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][] {
-                {true, false, true},
+                {false, false, true},
                 {true, true, true},
                 {true, true, true}
         };

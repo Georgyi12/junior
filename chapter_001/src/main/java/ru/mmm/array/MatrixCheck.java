@@ -5,17 +5,14 @@ public class MatrixCheck {
         boolean result = true;
         for (int i = 0; i < data.length; i++)
             if (data[0][0] != data[i][i]) {
-                result = false;
-                break;
+
+                for (int j = 0; j < data.length; j++)
+                    if (data[0][data.length - 1] != data[j][data.length - 1 - j]) {
+                        result = false;
+                        break;
+                    }
+
             }
-
-            for (int j = 0; j < data.length; j++)
-                if (data[0][data.length - 1] != data[j][data.length - 1 - j]) {
-                    result = false;
-                    break;
-                }
-
-
             return result;
         }
     }
